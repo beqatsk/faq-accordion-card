@@ -1,6 +1,7 @@
 import { GlobalStyles } from "./Global";
 import styled from "styled-components";
 import MainImage from "/images/main-image.png";
+import QuestionSection from "./components/QuestionSection";
 
 function App() {
   return (
@@ -9,6 +10,11 @@ function App() {
       <Main>
         <img src={MainImage} alt="mainimage" />
         <Title>FAQ</Title>
+        <QuestionSection />
+        <QuestionSection />
+        <QuestionSection />
+        <QuestionSection />
+        <QuestionSection />
       </Main>
     </>
   );
@@ -26,7 +32,7 @@ const Main = styled.main`
   border-radius: 25px;
   position: relative;
 
-  img {
+  & > img {
     width: 23.7rem;
     height: 18rem;
     position: absolute;
