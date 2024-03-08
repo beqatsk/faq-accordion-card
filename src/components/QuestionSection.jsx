@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import Arrow from "/images/Arrow.png";
-export default function QuestionSection() {
+import data from "../data.json";
+export default function QuestionSection({ questionIndex, active, setActive }) {
+  const question = data[questionIndex].question;
+  const answer = data[questionIndex].answer;
   return (
-    <QuestionContainer>
+    <QuestionContainer onClick={() => setActive(questionIndex)}>
       <div>
-        <Question>What is the maximum file upload size?</Question>
+        <Question>{question}</Question>
         <img src={Arrow} alt="arrowimage" />
       </div>
-      <Answer>
-        No more than 2GB. All files in your account must fit your allotted
-        storage space.
-      </Answer>
+      {active === questionIndex && <Answer>{answer}</Answer>}
     </QuestionContainer>
   );
 }
@@ -20,11 +20,13 @@ const QuestionContainer = styled.section`
   gap: 1.2rem;
   border-bottom: 1px solid #e8e8ea;
   padding-bottom: 1.8rem;
+  width: 100%;
+  cursor: pointer;
 
   & > div {
     display: flex;
     align-items: center;
-    gap: 3.4rem;
+    justify-content: space-between;
   }
 `;
 const Question = styled.h2`

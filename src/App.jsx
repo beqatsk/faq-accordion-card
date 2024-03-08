@@ -2,19 +2,41 @@ import { GlobalStyles } from "./Global";
 import styled from "styled-components";
 import MainImage from "/images/main-image.png";
 import QuestionSection from "./components/QuestionSection";
+import { useState } from "react";
 
 function App() {
+  const [active, setActive] = useState(null);
   return (
     <>
       <GlobalStyles />
       <Main>
         <img src={MainImage} alt="mainimage" />
         <Title>FAQ</Title>
-        <QuestionSection />
-        <QuestionSection />
-        <QuestionSection />
-        <QuestionSection />
-        <QuestionSection />
+        <QuestionSection
+          questionIndex={0}
+          active={active}
+          setActive={setActive}
+        />
+        <QuestionSection
+          questionIndex={1}
+          active={active}
+          setActive={setActive}
+        />
+        <QuestionSection
+          questionIndex={2}
+          active={active}
+          setActive={setActive}
+        />
+        <QuestionSection
+          questionIndex={3}
+          active={active}
+          setActive={setActive}
+        />
+        <QuestionSection
+          questionIndex={4}
+          active={active}
+          setActive={setActive}
+        />
       </Main>
     </>
   );
