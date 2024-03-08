@@ -44,13 +44,13 @@ function App() {
 
 export default App;
 const Main = styled.main`
-  width: 32.7rem;
+  width: 28.7rem;
   background-color: #ffffff;
-  padding: 13.2rem 2.4rem 4.8rem;
+  padding: 8rem 2.4rem 1.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3.8rem;
+  gap: 1.1rem;
   border-radius: 25px;
   position: relative;
 
@@ -59,10 +59,11 @@ const Main = styled.main`
     height: 18rem;
     position: absolute;
     top: -10rem;
+    left: 1.1rem;
   }
 `;
 const Title = styled.h1`
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 4rem;
 `;

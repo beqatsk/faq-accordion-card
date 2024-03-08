@@ -29,9 +29,9 @@ export default function QuestionSection({ questionIndex, active, setActive }) {
 const QuestionContainer = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.5rem;
   border-bottom: 1px solid #e8e8ea;
-  padding-bottom: 1.8rem;
+  padding-bottom: 0.8rem;
   width: 100%;
   cursor: pointer;
 
@@ -50,7 +50,7 @@ const QuestionContainer = styled.section`
   }
 `;
 const Question = styled.h2`
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: ${(props) =>
     props.active === props.questionIndex ? "700" : "400"};
   line-height: 1.6rem;
@@ -61,7 +61,7 @@ const Question = styled.h2`
   }
 `;
 const Answer = styled.p`
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-size: 400;
   color: #787887;
 `;
