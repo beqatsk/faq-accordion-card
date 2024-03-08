@@ -7,5 +7,6 @@ body{
 display: flex;
 justify-content: center;
 align-items: center;
+font-family: "Kumbh Sans", sans-serif;
 }
 `;
